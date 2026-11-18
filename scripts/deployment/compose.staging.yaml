@@ -5,8 +5,6 @@ services:
     image: ${QANDA_STAGING_IMAGE:?Set the locally loaded immutable candidate tag}
     platform: linux/amd64
     pull_policy: never
-    ports:
-      - '127.0.0.1:4008:5000'
     networks: [isolated]
     environment:
       MAIN_URL: http://127.0.0.1:4008
@@ -28,6 +26,23 @@ services:
     volumes:
       - stage-uploads:/uploads
       - stage-config:/config
+  browser-proxy:
+    profiles: [application]
+    image: nginx:stable-alpine
+    ports:
+      - '127.0.0.1:4008:8080'
+      - '127.0.0.1:4443:8443'
+    networks: [isolated, browser-access]
+    volumes:
+      - ./staging.nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - proxy-tls:/etc/nginx/test-tls:ro
+    depends_on: [application]
+networks:
+  browser-access:
+    # Only the fixed reverse proxy joins this network. The app stays internal.
 volumes:
   stage-uploads:
   stage-config:
+  proxy-tls:
+    external: true
+    name: qanda-restore-check_proxy-tls

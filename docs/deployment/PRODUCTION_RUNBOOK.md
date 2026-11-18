@@ -124,7 +124,8 @@ index is not part of this logical application export. These captures have
 different timestamps and are not a coordinated service snapshot.
 
 The restore network reports `Internal=true`, database ports are not published,
-and an outbound TCP probe failed. No application workers have been started.
+and outbound probes failed. Application workers subsequently ran only in this
+isolated environment during the final image tests.
 Temporal 1.28.1 recovered successfully with schema setup disabled, reports
 `SERVING`, returns 31 default-namespace visibility entries and can read a restored
 application workflow's event history. All 128 restored media/config file hashes
@@ -137,13 +138,50 @@ published source `f94f8b54498555a9e8948325efa6daf3319ebcf6`. Docker recipe stati
 checks passed without warnings and that image build succeeded. A runtime settings
 check then confirmed live `NODE_ENV` is unset; the release recipe's added
 production default was removed to preserve existing analytics cache behavior.
-The corrected recipe requires a new image build and final artifact tests.
-No private production data or environment files
-were provided to GitHub. Authenticated app tests, a validated image and full
-staging checks remain outstanding. Fresh coordinated backups and maintenance
-checks are still needed immediately before any production replacement.
-No production services have been restarted or replaced. Host addresses and
-private backup locations are deliberately omitted from this public document.
+The corrected build succeeded from source
+`92113bfdfa70b2048a6e940da4caec6f68f8c08c`:
+https://github.com/toluw/qanda-social-manager/actions/runs/44322608511.
+Its archive checksum and source revision were verified on both the Mac and VPS.
+Candidate tag: `qanda-social-manager:92113bfdfa70b2048a6e940da4caec6f68f8c08c`.
+Candidate image ID:
+`sha256:b9e087d74c5240350c675368ef07361b7096b11630ef152140e059662f3de15f`.
+
+Final Linux image checks passed: Next.js 16.4.6, bcrypt and Temporal modules,
+DOMPurify, unchanged Prisma schema, synchronized public AGPL/font/attribution
+notices, source offer pinned to the built revision, no root environment file,
+and no installed Polotno dependency. Browser tests passed at widths 390 and 1440
+for login, registration and legal pages with no overflow/broken images. Real
+disposable-account registration/sign-in and authenticated calendar, media and
+settings pages passed with zero page/route errors. Real backend CORS preflights
+were forwarded; no application API responses were fabricated. Existing restored
+media was served over HTTP with unchanged bytes. The orchestrator's health
+endpoint successfully connected to the restored Temporal namespace.
+
+The app remained exclusively on the internal network, and a direct publishing
+provider connectivity probe failed. Browser requests outside the permitted local
+transport were blocked. No production credentials/data were sent to GitHub.
+The test app and browser proxy are stopped after testing; their generated signing
+keys and sessions are discarded on stop/restart. A test-harness streaming timeout
+initially printed a disposable staging token; that session was invalidated and
+route errors now suppress request details. No production token was printed.
+
+The exact old application image is retained as `qanda-postiz-original:20261118`.
+`qanda-postiz-rollback:20261118` preserves its original filesystem layers and adds
+only the schema-safe startup wrapper; command, syntax and entrypoint-file checks
+passed. Rollback image ID:
+`sha256:18c533c823a4ff0d801295ba04355176e960590fee358479091a420733d01255`.
+All 55 declared production environment settings matched the running container
+in a private comparison. No values were printed.
+
+The approved maintenance window ended before preparation was complete. The live
+application still returns HTTP 200 on the original image; its container ID was
+verified unchanged. No production Compose file, environment file, application
+service, database schema, persistent mapping, OAuth setting, Caddy or DNS record
+has been changed. Fresh coordinated backups, a new maintenance window and live
+post-replacement checks remain required. The operator will run the final actual
+scheduled publishing test. Existing-user sign-in/provider authorization are live
+checks, not claims made by the disposable-account staging test.
+Host addresses and private backup locations are omitted from this public file.
 
 ## Isolated restore rules
 
@@ -164,8 +202,9 @@ private backup locations are deliberately omitted from this public document.
 ## Application staging harness
 
 Combine `compose.restore.yaml` and `compose.staging.yaml` with a locally loaded
-immutable candidate tag in `QANDA_STAGING_IMAGE`. The latter binds only localhost
-port 4008 and uses disposable authentication settings, the cloned
+immutable candidate tag in `QANDA_STAGING_IMAGE`. A fixed reverse proxy binds only
+localhost ports 4008 (HTTP) and 4443 (local test TLS). The application itself stays
+exclusively internal and uses disposable authentication settings, the cloned
 `application_stage` database and separate stage uploads/config volumes. It never
 loads a production environment file. Do not use it with production Compose.
 
@@ -175,4 +214,23 @@ application history while suppressing private values. `smoke-staging.cjs` requir
 Playwright and Chrome; it blocks external browser requests and forwards embedded
 production API URLs to the local API. It creates a disposable local account for
 registration/authenticated checks. These are staging tests, not proof of actual
-provider publication or existing-user sign-in. Final image tests remain pending.
+provider publication or existing-user sign-in. These image tests passed as
+recorded above. The TLS proxy is required to forward the production bundle's
+absolute HTTPS API URLs without buffering streaming responses. Its disposable
+self-signed certificate lives only in the dedicated local Docker volume, and
+certificate verification is relaxed only inside the isolated test browser.
+
+Before starting the proxy, create its local certificate once (with the candidate
+image already loaded and `QANDA_STAGING_IMAGE` set):
+
+```sh
+docker --context desktop-linux run --rm --platform linux/amd64 --network none \
+  -v qanda-restore-check_proxy-tls:/tls --entrypoint openssl "$QANDA_STAGING_IMAGE" \
+  req -x509 -newkey rsa:2048 -nodes -keyout /tls/key.pem -out /tls/cert.pem \
+  -days 1 -subj /CN=127.0.0.1 -addext subjectAltName=IP:127.0.0.1
+```
+
+Never reuse a production/SSH private key or import this test certificate into the
+system trust store. Run only the controlled browser harness against this image;
+its compiled API URL remains the production domain. Stop local app/proxy services
+when the harness finishes. Restored data and all Docker volumes stay available.
