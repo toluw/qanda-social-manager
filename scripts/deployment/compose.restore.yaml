@@ -19,13 +19,13 @@ services:
     image: postgres:16
     environment:
       POSTGRES_USER: staging
-      POSTGRES_DB: temporal_restore
+      POSTGRES_DB: temporal
       POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - temporal-db:/var/lib/postgresql/data
     networks: [isolated]
     healthcheck:
-      test: [CMD-SHELL, pg_isready -U staging -d temporal_restore]
+      test: [CMD-SHELL, pg_isready -U staging -d temporal]
       interval: 5s
       timeout: 3s
       retries: 20
@@ -51,6 +51,27 @@ services:
       interval: 10s
       timeout: 5s
       retries: 30
+  temporal:
+    image: temporalio/auto-setup:1.28.1
+    profiles: [recovery]
+    environment:
+      DB: postgres12
+      DB_PORT: '5432'
+      DBNAME: temporal
+      POSTGRES_USER: staging
+      POSTGRES_PWD: ''
+      POSTGRES_SEEDS: temporal-db
+      ENABLE_ES: 'true'
+      ES_SEEDS: elasticsearch
+      ES_VERSION: v7
+      ES_VIS_INDEX: temporal_visibility_v1_dev
+      SKIP_SCHEMA_SETUP: 'true'
+      SKIP_DEFAULT_NAMESPACE_CREATION: 'true'
+      SKIP_ADD_CUSTOM_SEARCH_ATTRIBUTES: 'true'
+      DYNAMIC_CONFIG_FILE_PATH: /recovered/postiz/dynamicconfig/development-sql.yaml
+    networks: [isolated]
+    volumes:
+      - dynamicconfig:/recovered:ro
 networks:
   isolated:
     internal: true
@@ -59,3 +80,7 @@ volumes:
   temporal-db:
   redis:
   elasticsearch:
+  dynamicconfig:
+    # Populated explicitly from the encrypted capture before Temporal starts.
+    external: true
+    name: qanda-restore-check_dynamicconfig

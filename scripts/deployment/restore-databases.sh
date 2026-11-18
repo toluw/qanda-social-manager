@@ -6,7 +6,7 @@ backup_directory=$1
 backup_identity=$2
 script_directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 compose=(docker --context desktop-linux compose -f "$script_directory/compose.restore.yaml")
-for spec in 'application-db application_restore application.pgcustom' 'temporal-db temporal_restore temporal.pgcustom'; do
+for spec in 'application-db application_restore application.pgcustom' 'temporal-db temporal temporal.pgcustom'; do
   read -r service database archive <<< "$spec"
   # Refuse to overwrite an existing restore or other populated database.
   table_count=$("${compose[@]}" exec -T "$service" psql -U staging -d "$database" -Atqc \

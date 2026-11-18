@@ -14,6 +14,9 @@
 .agents
 .codex
 .aws
+.claude
+.secrets
+**/.ssh
 .nx
 .devcontainer
 AGENTS.md

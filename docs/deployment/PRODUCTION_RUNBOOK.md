@@ -90,7 +90,9 @@ amd64 application image and unchanged Compose project/service/volume mappings.
 The live root and frontend package manifests match the v2.25.3 source revision,
 and the Prisma schema SHA256 matches the candidate:
 `fc4f5ca720425c3b071a1f46030713d9af8729b4472aba9f77d1684b40df772d`.
-These fingerprints are useful evidence, not full application-source equivalence.
+An additional comparison found all 377 backend, orchestrator and shared backend
+library source files identical to v2.25.3 in the running image. Frontend/build
+toolchain differences are intentional; this is not a claim of whole-image identity.
 
 The operator selected encrypted off-server backups and isolated Docker staging
 on the local Mac. `scripts/deployment/capture-online-backups.sh` captures database
@@ -118,7 +120,21 @@ different timestamps and are not a coordinated service snapshot.
 
 The restore network reports `Internal=true`, database ports are not published,
 and an outbound TCP probe failed. No application workers have been started.
-Temporal server recovery, authenticated app tests, a validated image and full
+Temporal 1.28.1 recovered successfully with schema setup disabled, reports
+`SERVING`, returns 31 default-namespace visibility entries and can read a restored
+application workflow's event history. All 128 restored media/config file hashes
+match the decrypted archive. The dynamic config must belong to UID 1000 in its
+local restored volume. The local Temporal database must retain the name
+`temporal`, because the restored schema-version record includes that name.
+
+The operator approved an artifact-only GitHub Actions build, now started from
+published source `f94f8b54498555a9e8948325efa6daf3319ebcf6`. Docker recipe static
+checks passed without warnings and that image build succeeded. A runtime settings
+check then confirmed live `NODE_ENV` is unset; the release recipe's added
+production default was removed to preserve existing analytics cache behavior.
+The corrected recipe requires a new image build and final artifact tests.
+No private production data or environment files
+were provided to GitHub. Authenticated app tests, a validated image and full
 staging checks remain outstanding. Fresh coordinated backups and maintenance
 checks are still needed immediately before any production replacement.
 No production services have been restarted or replaced. Host addresses and
@@ -139,3 +155,19 @@ private backup locations are deliberately omitted from this public document.
   writing decrypted files. Passing it does not establish a successful restore.
 - Preserve a secure recovery copy of the age identity on a separate device.
   Losing the identity makes these encrypted captures unusable.
+
+## Application staging harness
+
+Combine `compose.restore.yaml` and `compose.staging.yaml` with a locally loaded
+immutable candidate tag in `QANDA_STAGING_IMAGE`. The latter binds only localhost
+port 4008 and uses disposable authentication settings, the cloned
+`application_stage` database and separate stage uploads/config volumes. It never
+loads a production environment file. Do not use it with production Compose.
+
+`verify-restored-media.py` checks every restored file's bytes against the encrypted
+archive. `verify-temporal-recovery.py` checks internal Temporal health and one
+application history while suppressing private values. `smoke-staging.cjs` requires
+Playwright and Chrome; it blocks external browser requests and forwards embedded
+production API URLs to the local API. It creates a disposable local account for
+registration/authenticated checks. These are staging tests, not proof of actual
+provider publication or existing-user sign-in. Final image tests remain pending.
