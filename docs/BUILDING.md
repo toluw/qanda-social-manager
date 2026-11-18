@@ -79,9 +79,9 @@ The source page is `/legal.html#source`. Its settings are in
 
 | Field | Current value | Required before enabling links |
 | --- | --- | --- |
-| `repositoryUrl` | Empty placeholder | Operator-approved company GitHub repository URL ending in `/qanda-social-manager` |
+| `repositoryUrl` | `https://github.com/toluw/qanda-social-manager` (approved; publication pending) | Operator-approved company GitHub repository URL ending in `/qanda-social-manager` |
 | `releaseCommit` | Empty placeholder | Full 40-character commit of the complete published modified source |
-| `urlApproved` | `false` | Explicit operator approval of the final URL |
+| `urlApproved` | `true` | Explicit operator approval of the final URL |
 | `sourcePublished` | `false` | Verified public publication of the complete modified source |
 
 While either flag is false, the page shows a pending notice and has no derivative

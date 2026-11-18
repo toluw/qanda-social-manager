@@ -53,11 +53,12 @@ Include the source and scripts needed to build, install and run that version,
 plus applicable dependency source and notices. Do not include credentials,
 tokens, private configuration or user data.
 
-The planned public company repository is named `qanda-social-manager`. Its final
-GitHub owner and URL have not been approved, and publication has not been
-confirmed. `apps/frontend/source-code-config.json` deliberately contains an empty
-`repositoryUrl` and `releaseCommit`, with `urlApproved` and `sourcePublished` set
-to false. These are configurable placeholders, not working source links.
+The operator approved https://github.com/toluw/qanda-social-manager as the
+company source repository. Publication has not been confirmed: the first push
+was denied because the locally authenticated GitHub account lacks write access.
+`apps/frontend/source-code-config.json` records the approved URL, an empty
+`releaseCommit`, `urlApproved: true` and `sourcePublished: false`. There is no
+working modified-source download offer yet.
 
 After explicit URL approval and verified publication, record the exact release
 commit and regenerate the static Source Code section with

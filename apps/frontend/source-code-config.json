@@ -1,7 +1,7 @@
 {
-  "_instructions": "PLACEHOLDER: Set repositoryUrl only after the operator approves the company GitHub URL. Set releaseCommit to the full commit containing this version's complete modified source. Mark urlApproved and sourcePublished true only after approval and verified public publication. Then run python3 apps/frontend/scripts/prepare-source-page.py from the repository root. This does not authorize deployment.",
-  "repositoryUrl": "",
+  "_instructions": "Repository URL approved by operator. Publication pending: do not set sourcePublished true until the complete modified source is publicly available and verified. Set releaseCommit to the published modified source revision, then run python3 apps/frontend/scripts/prepare-source-page.py. No deployment is authorized.",
+  "repositoryUrl": "https://github.com/toluw/qanda-social-manager",
   "releaseCommit": "",
-  "urlApproved": false,
+  "urlApproved": true,
   "sourcePublished": false
 }
