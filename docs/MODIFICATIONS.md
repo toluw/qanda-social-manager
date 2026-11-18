@@ -134,3 +134,14 @@ is generated from this revision with the approved company URL and both flags
 true. This follow-up changes source-offer configuration/HTML and records only;
 run the included generator with these values to reproduce it. No deployment
 or resolution of the Next.js advisory is claimed.
+
+## Next.js security patch — 2026-11-18
+
+On branch security/next-16.4.6, updated next, its override and the matching
+eslint-config-next pin from 16.4.2 to 16.4.6. Preserved unrelated lockfile
+records and validated the scoped graph with a frozen install. Typecheck and
+production Webpack build pass. Signed-out local browser checks pass at mobile
+and desktop widths. Source lint retains baseline failures, with no new
+diagnostic summaries. npm's target-version query returned no Next advisories.
+See NEXT_SECURITY_PATCH.md for evidence and limits. Production remains unchanged;
+authenticated staging and source/image correspondence are still unverified.
