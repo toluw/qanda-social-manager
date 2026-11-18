@@ -1,0 +1,7 @@
+# Use a local tag pinned to the exact old image ID, never a moving upstream tag.
+# Retains the original application artifacts; replaces only its startup wrapper
+# so an emergency rollback cannot run the legacy automatic Prisma schema push.
+ARG ROLLBACK_BASE_IMAGE
+FROM ${ROLLBACK_BASE_IMAGE}
+COPY scripts/deployment/start-release.sh /app/scripts/deployment/start-release.sh
+CMD ["bash", "/app/scripts/deployment/start-release.sh"]

@@ -74,8 +74,13 @@ schedule views and an actual test scheduled publication before production.
 5. Check application health, login, channels, drafts, uploads, scheduled jobs,
    Temporal errors and a controlled publication. Keep the maintenance window open
    until those checks pass. Record observations, not simulated success.
-6. Roll back by restoring the old application image reference and recreating
-   only that service, provided no incompatible data/schema change occurred.
+6. Retain the exact old image and prepare `Dockerfile.rollback` from a local tag
+   verified against its image ID. This preserves its application artifacts but
+   uses the schema-safe startup wrapper; the original image's CMD automatically
+   invokes Prisma schema push and must not be used blindly for rollback.
+   Roll back to that tested wrapper image and recreate only the app service,
+   provided no incompatible data/schema change occurred. Never derive it by
+   committing the running container: that could capture private environment data.
    If schema differences are discovered at any point, stop and reassess.
 
 Never run database resets, volume pruning, `docker compose down -v`, automatic

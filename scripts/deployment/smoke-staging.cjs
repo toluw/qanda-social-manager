@@ -48,12 +48,21 @@ const origin = 'http://127.0.0.1:4008';
     }
     // A disposable local account verifies real registration and authenticated UI.
     // No production passwords, OAuth keys or tokens are used or printed.
+    const email = `local-smoke-${Date.now()}@example.test`;
+    const password = crypto.randomBytes(24).toString('hex');
     await page.goto(origin + '/auth', { waitUntil: 'networkidle' });
-    await page.locator('input[name=email]').fill(`local-smoke-${Date.now()}@example.test`);
-    await page.locator('input[name=password]').fill(crypto.randomBytes(24).toString('hex'));
+    await page.locator('input[name=email]').fill(email);
+    await page.locator('input[name=password]').fill(password);
     await page.locator('input[name=company]').fill('Local Staging Smoke');
     await page.locator('form button[type=submit]').click();
     await page.waitForURL(url => !url.pathname.startsWith('/auth'), { timeout: 90000 });
+    await context.clearCookies();
+    await page.goto(origin + '/auth/login', { waitUntil: 'networkidle' });
+    await page.locator('input[name=email]').fill(email);
+    await page.locator('input[name=password]').fill(password);
+    await page.locator('form button[type=submit]').click();
+    await page.waitForURL(url => !url.pathname.startsWith('/auth'), { timeout: 90000 });
+    console.log('Disposable local account registration and sign-in passed');
     for (const path of ['/launches', '/media', '/settings']) {
       const response = await page.goto(origin + path, { waitUntil: 'networkidle', timeout: 90000 });
       if (response.status() !== 200 || new URL(page.url()).pathname.startsWith('/auth'))
