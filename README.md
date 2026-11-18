@@ -1,3 +1,21 @@
+# Q and A Social Manager
+
+Q and A Social Manager is Q and A App's branded derivative of Postiz, based on
+upstream tag `v2.25.3` (commit `a5affe62c74e39c1e7ac960d50d8418b807d532c`).
+Original Postiz contributions remain attributed to their respective authors.
+The covered application and modifications retain the GNU AGPL-3.0 license.
+
+See [build instructions](docs/BUILDING.md), [modification record](docs/MODIFICATIONS.md),
+[third-party notices](THIRD_PARTY_NOTICES.md), and the original [license](LICENSE).
+Build/browser validation and the dependency/font notice review remain pending.
+The frontend source offer stays pending until publication has been verified.
+
+The upstream README follows for project context. Its marketing claims, hosted
+service links and installation examples describe upstream Postiz; they are not
+Q and A customer claims or production deployment instructions.
+
+---
+
 <p align="center">
   <a href="https://postiz.com/" target="_blank">
   <picture>

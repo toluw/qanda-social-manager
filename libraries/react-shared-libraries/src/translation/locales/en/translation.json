@@ -1,7 +1,7 @@
 {
   "calendar": "Calendar",
   "webhooks": "Webhooks",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhooks are a way to get notified when something happens in Postiz via\n an HTTP request.",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhooks are a way to get notified when something happens in Q and A Social Manager via\n an HTTP request.",
   "name": "Name",
   "url": "URL",
   "edit": "Edit",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "Can I trust Postiz?",
   "faq_postiz_gitroom_is_proudly_open_source": "Postiz is proudly open-source! We believe in an ethical and transparent culture, meaning that Postiz will live forever. You can check out the entire code or use it for personal projects. To view the open-source repository, <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">click here</a>.",
   "faq_what_are_channels": "What are channels?",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz allows you to schedule your posts between different channels.\nA channel is a publishing platform where you can schedule your posts.\nFor example, you can schedule your posts on X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads and Pinterest.",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager allows you to schedule your posts between different channels.\nA channel is a publishing platform where you can schedule your posts.\nFor example, you can schedule your posts on X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads and Pinterest.",
   "faq_what_are_team_members": "What are team members?",
   "faq_if_you_have_a_team_with_multiple_members": "If you have a team with multiple members, you can invite them to your workspace to collaborate on your posts and add their personal channels",
   "faq_what_is_ai_auto_complete": "What is AI auto-complete?",
@@ -609,7 +609,7 @@
   "select_channels": "Select Channels",
   "start_a_new_chat": "Start a new chat",
   "your_assistant": "Your Assistant",
-  "agent_welcome_message": "Hello, I am your Postiz agent 🙌🏻.\n\nI can schedule a post or multiple posts to multiple channels and generate pictures and videos.\n\nYou can select the channels you want to use from the left menu.\n\nYou can see your previous conversations from the right menu.\n\nYou can also use me as an MCP Server, check Settings >> Agents / Dev",
+  "agent_welcome_message": "Hello, I am your Q and A Social Manager agent 🙌🏻.\n\nI can schedule a post or multiple posts to multiple channels and generate pictures and videos.\n\nYou can select the channels you want to use from the left menu.\n\nYou can see your previous conversations from the right menu.\n\nYou can also use me as an MCP Server, check Settings >> Agents / Dev",
   "last_github_trending": "Last Github Trending",
   "next_predicted_github_trending": "Next Predicted GitHub Trending",
   "repository": "Repository",
@@ -896,6 +896,14 @@
   "trial": "Trial",
   "thumbnails_and_alt_text": "Thumbnails & alt text",
   "media_settings_section_description": "Click a media item to set its alt text, or its thumbnail if it is a video.",
-  "media_settings_section_tooltip": "Thumbnails apply to videos in the main post and are sent to every channel that supports them. YouTube may ignore them on videos it treats as Shorts (vertical, up to 3 minutes) without failing the publish, and requires a phone-verified channel for custom thumbnails. If YouTube rejects the thumbnail the video is still published, and Postiz cannot check eligibility in advance.",
-  "youtube_thumbnail_overrides_media": "This post has a YouTube-specific thumbnail, which overrides the thumbnail set in the media settings."
+  "media_settings_section_tooltip": "Thumbnails apply to videos in the main post and are sent to every channel that supports them. YouTube may ignore them on videos it treats as Shorts (vertical, up to 3 minutes) without failing the publish, and requires a phone-verified channel for custom thumbnails. If YouTube rejects the thumbnail the video is still published, and Q and A Social Manager cannot check eligibility in advance.",
+  "youtube_thumbnail_overrides_media": "This post has a YouTube-specific thumbnail, which overrides the thumbnail set in the media settings.",
+  "qanda_content_workspace_description": "Connect your channels, plan content, and schedule posts in one workspace.",
+  "qanda_review_plan_details": "Review the selected plan and checkout details before subscribing.",
+  "qanda_upstream_tutorial_title": "Postiz tutorial (upstream project)",
+  "qanda_upstream_tutorial_description": "This tutorial covers the upstream Postiz application. Branding and some screens may differ from Q and A Social Manager.",
+  "qanda_checkout_faq_title": "Where can I review billing details?",
+  "qanda_checkout_faq_description": "Review the amounts, trial terms and payment details shown at checkout before confirming your subscription.",
+  "qanda_source_faq_title": "What is Q and A Social Manager based on?",
+  "qanda_source_faq_description": "Q and A Social Manager is a branded derivative of Postiz, an open-source social media scheduling application licensed under AGPL-3.0. <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration: underline;\">View the upstream Postiz repository</a>."
 }

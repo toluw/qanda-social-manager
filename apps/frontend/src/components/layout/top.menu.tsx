@@ -1,5 +1,7 @@
 'use client';
 
+import { LegalLink } from '@gitroom/frontend/components/ui/legal-link.component';
+
 import { FC, ReactNode } from 'react';
 import { useUser } from '@gitroom/frontend/components/layout/user.context';
 import { useVariables } from '@gitroom/react/helpers/variable.context';
@@ -289,6 +291,7 @@ export const TopMenu: FC = () => {
               onClick={item.onClick}
             />
           ))}
+        <LegalLink />
       </div>
     </>
   );

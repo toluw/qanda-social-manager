@@ -1,10 +1,10 @@
+import { APP_NAME, APP_DESCRIPTION } from '@gitroom/frontend/branding';
 export const dynamic = 'force-dynamic';
 import { LaunchesComponent } from '@gitroom/frontend/components/launches/launches.component';
 import { Metadata } from 'next';
-import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz Calendar' : 'Gitroom Launches'}`,
-  description: '',
+  title: `Calendar | ${APP_NAME}`,
+  description: APP_DESCRIPTION,
 };
 export default async function Index() {
   return <LaunchesComponent />;

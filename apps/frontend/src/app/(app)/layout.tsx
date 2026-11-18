@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { APP_NAME, APP_DESCRIPTION } from '@gitroom/frontend/branding';
 import { SentryComponent } from '@gitroom/frontend/components/layout/sentry.component';
 
 export const dynamic = 'force-dynamic';
@@ -23,6 +25,11 @@ import {
 import { HtmlComponent } from '@gitroom/frontend/components/layout/html.component';
 import Script from 'next/script';
 import { ChangeDirClient } from '@gitroom/frontend/components/new-layout/change.dir.client';
+
+export const metadata: Metadata = {
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+};
 
 export default async function AppLayout({ children }: { children: ReactNode }) {
   const cookieStore = await cookies();

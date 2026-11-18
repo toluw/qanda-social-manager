@@ -1,7 +1,7 @@
 {
   "calendar": "Calendario",
   "webhooks": "Webhooks",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Los webhooks son una forma de recibir notificaciones cuando algo sucede en Postiz mediante una solicitud HTTP.",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Los webhooks son una forma de recibir notificaciones cuando algo sucede en Q and A Social Manager mediante una solicitud HTTP.",
   "name": "Nombre",
   "url": "URL",
   "edit": "Editar",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "¿Puedo confiar en Postiz?",
   "faq_postiz_gitroom_is_proudly_open_source": "¡Postiz es orgullosamente de código abierto! Creemos en una cultura ética y transparente, lo que significa que Postiz vivirá para siempre. Puedes revisar todo el código o usarlo para proyectos personales. Para ver el repositorio de código abierto, <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">haz clic aquí</a>.",
   "faq_what_are_channels": "¿Qué son los canales?",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz te permite programar tus publicaciones entre diferentes canales.\nUn canal es una plataforma de publicación donde puedes programar tus publicaciones.\nPor ejemplo, puedes programar tus publicaciones en X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads y Pinterest.",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager te permite programar tus publicaciones entre diferentes canales.\nUn canal es una plataforma de publicación donde puedes programar tus publicaciones.\nPor ejemplo, puedes programar tus publicaciones en X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads y Pinterest.",
   "faq_what_are_team_members": "¿Qué son los miembros del equipo?",
   "faq_if_you_have_a_team_with_multiple_members": "Si tienes un equipo con varios miembros, puedes invitarlos a tu espacio de trabajo para colaborar en tus publicaciones y agregar sus canales personales",
   "faq_what_is_ai_auto_complete": "¿Qué es la autocompletación con IA?",
@@ -609,7 +609,7 @@
   "select_channels": "Seleccionar canales",
   "start_a_new_chat": "Iniciar un nuevo chat",
   "your_assistant": "Tu Asistente",
-  "agent_welcome_message": "Hola, soy tu agente de Postiz 🙌🏻.\n\nPuedo programar una publicación o varias publicaciones en múltiples canales y generar imágenes y videos.\n\nPuedes seleccionar los canales que deseas usar desde el menú de la izquierda.\n\nPuedes ver tus conversaciones anteriores desde el menú de la derecha.\n\nTambién puedes usarme como servidor MCP. Ve a Configuración >> Agentes / Dev.",
+  "agent_welcome_message": "Hola, soy tu agente de Q and A Social Manager 🙌🏻.\n\nPuedo programar una publicación o varias publicaciones en múltiples canales y generar imágenes y videos.\n\nPuedes seleccionar los canales que deseas usar desde el menú de la izquierda.\n\nPuedes ver tus conversaciones anteriores desde el menú de la derecha.\n\nTambién puedes usarme como servidor MCP. Ve a Configuración >> Agentes / Dev.",
   "last_github_trending": "Últimas tendencias de Github",
   "next_predicted_github_trending": "Próximas tendencias previstas de GitHub",
   "repository": "Repositorio",
@@ -894,6 +894,6 @@
   "trial": "Prueba",
   "thumbnails_and_alt_text": "Miniaturas y texto alternativo",
   "media_settings_section_description": "Haz clic en un elemento multimedia para establecer su texto alternativo, o su miniatura si es un video.",
-  "media_settings_section_tooltip": "Las miniaturas se aplican a los videos en la publicación principal y se envían a todos los canales que las admiten. YouTube puede ignorarlas en los videos que considera Shorts (verticales, de hasta 3 minutos) sin fallar la publicación, y requiere un canal verificado por teléfono para miniaturas personalizadas. Si YouTube rechaza la miniatura, el video igualmente se publica y Postiz no puede comprobar la elegibilidad con antelación.",
+  "media_settings_section_tooltip": "Las miniaturas se aplican a los videos en la publicación principal y se envían a todos los canales que las admiten. YouTube puede ignorarlas en los videos que considera Shorts (verticales, de hasta 3 minutos) sin fallar la publicación, y requiere un canal verificado por teléfono para miniaturas personalizadas. Si YouTube rechaza la miniatura, el video igualmente se publica y Q and A Social Manager no puede comprobar la elegibilidad con antelación.",
   "youtube_thumbnail_overrides_media": "Esta publicación tiene una miniatura específica de YouTube, que reemplaza la miniatura establecida en la configuración de medios."
 }

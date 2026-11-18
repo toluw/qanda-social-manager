@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { APP_NAME, APP_DESCRIPTION } from '@gitroom/frontend/branding';
 import { MantineWrapper } from '@gitroom/react/helpers/mantine.wrapper';
 
 export const dynamic = 'force-dynamic';
@@ -10,6 +12,11 @@ import { jakartaSans } from '@gitroom/frontend/fonts/plus-jakarta-sans/plus.jaka
 import clsx from 'clsx';
 import { VariableContextComponent } from '@gitroom/react/helpers/variable.context';
 import UtmSaver from '@gitroom/helpers/utils/utm.saver';
+
+export const metadata: Metadata = {
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+};
 
 export default async function AppLayout({ children }: { children: ReactNode }) {
   return (

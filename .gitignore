@@ -5,6 +5,13 @@ dist
 tmp
 /out-tsc
 .env
+.env.*
+!.env.example
+!.env.sample
+
+# Local operator instructions and production diagnostics are not source artifacts.
+/AGENTS.md
+/docs/BRANDING_BRIEF.md
 .apple
 # dependencies
 node_modules

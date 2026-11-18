@@ -1,7 +1,7 @@
 {
   "calendar": "Calendrier",
   "webhooks": "Webhooks",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Les webhooks sont un moyen d'être notifié lorsqu'il se passe quelque chose dans Postiz via une requête HTTP.",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Les webhooks sont un moyen d'être notifié lorsqu'il se passe quelque chose dans Q and A Social Manager via une requête HTTP.",
   "name": "Nom",
   "url": "URL",
   "edit": "Modifier",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "Puis-je faire confiance à Postiz ?",
   "faq_postiz_gitroom_is_proudly_open_source": "Postiz est fièrement open source ! Nous croyons en une culture éthique et transparente, ce qui signifie que Postiz existera toujours. Vous pouvez consulter l'intégralité du code ou l'utiliser pour des projets personnels. Pour voir le dépôt open source, <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">cliquez ici</a>.",
   "faq_what_are_channels": "Que sont les canaux ?",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz vous permet de planifier vos publications sur différents canaux.\nUn canal est une plateforme de publication où vous pouvez programmer vos publications.\nPar exemple, vous pouvez planifier vos publications sur X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads et Pinterest.",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager vous permet de planifier vos publications sur différents canaux.\nUn canal est une plateforme de publication où vous pouvez programmer vos publications.\nPar exemple, vous pouvez planifier vos publications sur X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads et Pinterest.",
   "faq_what_are_team_members": "Que sont les membres de l’équipe ?",
   "faq_if_you_have_a_team_with_multiple_members": "Si vous avez une équipe avec plusieurs membres, vous pouvez les inviter dans votre espace de travail pour collaborer sur vos publications et ajouter leurs canaux personnels",
   "faq_what_is_ai_auto_complete": "Qu’est-ce que la saisie automatique par IA ?",
@@ -609,7 +609,7 @@
   "select_channels": "Sélectionner les canaux",
   "start_a_new_chat": "Démarrer une nouvelle conversation",
   "your_assistant": "Votre assistant",
-  "agent_welcome_message": "Bonjour, je suis votre agent Postiz 🙌🏻.\n\nJe peux programmer une ou plusieurs publications sur plusieurs canaux, ainsi que générer des images et des vidéos.\n\nVous pouvez sélectionner les canaux que vous souhaitez utiliser dans le menu de gauche.\n\nVous pouvez consulter vos conversations précédentes dans le menu de droite.\n\nVous pouvez également m’utiliser en tant que serveur MCP, consultez Paramètres >> Agents / Dev.",
+  "agent_welcome_message": "Bonjour, je suis votre agent Q and A Social Manager 🙌🏻.\n\nJe peux programmer une ou plusieurs publications sur plusieurs canaux, ainsi que générer des images et des vidéos.\n\nVous pouvez sélectionner les canaux que vous souhaitez utiliser dans le menu de gauche.\n\nVous pouvez consulter vos conversations précédentes dans le menu de droite.\n\nVous pouvez également m’utiliser en tant que serveur MCP, consultez Paramètres >> Agents / Dev.",
   "last_github_trending": "Dernières tendances GitHub",
   "next_predicted_github_trending": "Prochaines tendances GitHub prévues",
   "repository": "Dépôt",
@@ -894,6 +894,6 @@
   "trial": "Essai",
   "thumbnails_and_alt_text": "Vignettes et texte alternatif",
   "media_settings_section_description": "Cliquez sur un élément média pour définir son texte alternatif, ou sa miniature s’il s’agit d’une vidéo.",
-  "media_settings_section_tooltip": "Les vignettes s’appliquent aux vidéos de la publication principale et sont envoyées à chaque canal qui les prend en charge. YouTube peut les ignorer pour les vidéos traitées comme Shorts (verticales, jusqu’à 3 minutes) sans empêcher la publication, et exige une chaîne vérifiée par téléphone pour les vignettes personnalisées. Si YouTube rejette la vignette, la vidéo est quand même publiée, et Postiz ne peut pas vérifier l’éligibilité à l’avance.",
+  "media_settings_section_tooltip": "Les vignettes s’appliquent aux vidéos de la publication principale et sont envoyées à chaque canal qui les prend en charge. YouTube peut les ignorer pour les vidéos traitées comme Shorts (verticales, jusqu’à 3 minutes) sans empêcher la publication, et exige une chaîne vérifiée par téléphone pour les vignettes personnalisées. Si YouTube rejette la vignette, la vidéo est quand même publiée, et Q and A Social Manager ne peut pas vérifier l’éligibilité à l’avance.",
   "youtube_thumbnail_overrides_media": "Cette publication possède une vignette spécifique à YouTube, qui remplace la vignette définie dans les paramètres multimédias."
 }

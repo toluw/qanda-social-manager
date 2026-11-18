@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        brandAccent: 'rgb(var(--brand-accent) / <alpha-value>)',
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         textColor: 'var(--new-btn-text)',

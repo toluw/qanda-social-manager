@@ -1,7 +1,7 @@
 {
   "calendar": "Kalender",
   "webhooks": "Webhooks",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhooks sind eine Möglichkeit, benachrichtigt zu werden, wenn etwas in Postiz passiert,\n über eine HTTP-Anfrage.",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhooks sind eine Möglichkeit, benachrichtigt zu werden, wenn etwas in Q and A Social Manager passiert,\n über eine HTTP-Anfrage.",
   "name": "Name",
   "url": "URL",
   "edit": "Bearbeiten",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "Kann ich Postiz vertrauen?",
   "faq_postiz_gitroom_is_proudly_open_source": "Postiz ist stolz darauf, Open Source zu sein! Wir glauben an eine ethische und transparente Kultur, was bedeutet, dass Postiz für immer bestehen wird. Du kannst den gesamten Code einsehen oder für persönliche Projekte nutzen. Um das Open-Source-Repository anzusehen, <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">klicke hier</a>.",
   "faq_what_are_channels": "Was sind Kanäle?",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz ermöglicht es dir, deine Beiträge auf verschiedenen Kanälen zu planen.\nEin Kanal ist eine Veröffentlichungsplattform, auf der du deine Beiträge planen kannst.\nZum Beispiel kannst du deine Beiträge auf X, Facebook, Instagram, TikTok, YouTube, Reddit, LinkedIn, Dribbble, Threads oder Pinterest planen.",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager ermöglicht es dir, deine Beiträge auf verschiedenen Kanälen zu planen.\nEin Kanal ist eine Veröffentlichungsplattform, auf der du deine Beiträge planen kannst.\nZum Beispiel kannst du deine Beiträge auf X, Facebook, Instagram, TikTok, YouTube, Reddit, LinkedIn, Dribbble, Threads oder Pinterest planen.",
   "faq_what_are_team_members": "Was sind Teammitglieder?",
   "faq_if_you_have_a_team_with_multiple_members": "Wenn du ein Team mit mehreren Mitgliedern hast, kannst du sie in deinen Arbeitsbereich einladen, um gemeinsam an Beiträgen zu arbeiten und ihre persönlichen Kanäle hinzuzufügen.",
   "faq_what_is_ai_auto_complete": "Was ist KI-Autovervollständigung?",
@@ -609,7 +609,7 @@
   "select_channels": "Kanäle auswählen",
   "start_a_new_chat": "Neuen Chat starten",
   "your_assistant": "Ihr Assistent",
-  "agent_welcome_message": "Hallo, ich bin dein Postiz-Agent 🙌🏻.\n\nIch kann einen oder mehrere Beiträge gleichzeitig für verschiedene Kanäle planen und Bilder sowie Videos generieren.\n\nDu kannst die gewünschten Kanäle im linken Menü auswählen.\n\nDeine bisherigen Unterhaltungen findest du im rechten Menü.\n\nDu kannst mich außerdem als MCP-Server nutzen. Schau dazu unter Einstellungen >> Agents / Dev.",
+  "agent_welcome_message": "Hallo, ich bin dein Q and A Social Manager-Agent 🙌🏻.\n\nIch kann einen oder mehrere Beiträge gleichzeitig für verschiedene Kanäle planen und Bilder sowie Videos generieren.\n\nDu kannst die gewünschten Kanäle im linken Menü auswählen.\n\nDeine bisherigen Unterhaltungen findest du im rechten Menü.\n\nDu kannst mich außerdem als MCP-Server nutzen. Schau dazu unter Einstellungen >> Agents / Dev.",
   "last_github_trending": "Letzte Github-Trends",
   "next_predicted_github_trending": "Nächste vorhergesagte Github-Trends",
   "repository": "Repository",
@@ -894,6 +894,6 @@
   "trial": "Testphase",
   "thumbnails_and_alt_text": "Vorschaubilder & Alt-Text",
   "media_settings_section_description": "Klicken Sie auf ein Medienelement, um dessen Alternativtext oder, falls es sich um ein Video handelt, dessen Thumbnail festzulegen.",
-  "media_settings_section_tooltip": "Vorschaubilder gelten für Videos im Hauptbeitrag und werden an jeden Kanal gesendet, der sie unterstützt. YouTube kann sie bei Videos ignorieren, die als Shorts behandelt werden (vertikal, bis zu 3 Minuten), ohne dass die Veröffentlichung fehlschlägt, und erfordert für benutzerdefinierte Vorschaubilder einen kanal, der per Telefon verifiziert ist. Wenn YouTube das Vorschaubild ablehnt, wird das Video trotzdem veröffentlicht, und Postiz kann die Eignung nicht im Voraus prüfen.",
+  "media_settings_section_tooltip": "Vorschaubilder gelten für Videos im Hauptbeitrag und werden an jeden Kanal gesendet, der sie unterstützt. YouTube kann sie bei Videos ignorieren, die als Shorts behandelt werden (vertikal, bis zu 3 Minuten), ohne dass die Veröffentlichung fehlschlägt, und erfordert für benutzerdefinierte Vorschaubilder einen kanal, der per Telefon verifiziert ist. Wenn YouTube das Vorschaubild ablehnt, wird das Video trotzdem veröffentlicht, und Q and A Social Manager kann die Eignung nicht im Voraus prüfen.",
   "youtube_thumbnail_overrides_media": "Dieser Beitrag hat ein YouTube-spezifisches Vorschaubild, das das in den Medien-Einstellungen festgelegte Vorschaubild überschreibt."
 }

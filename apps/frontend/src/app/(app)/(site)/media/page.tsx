@@ -1,10 +1,10 @@
+import { APP_NAME, APP_DESCRIPTION } from '@gitroom/frontend/branding';
 import { MediaLayoutComponent } from '@gitroom/frontend/components/new-layout/layout.media.component';
 import { Metadata } from 'next';
-import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Media`,
-  description: '',
+  title: `Media | ${APP_NAME}`,
+  description: APP_DESCRIPTION,
 };
 
 export default async function Page() {

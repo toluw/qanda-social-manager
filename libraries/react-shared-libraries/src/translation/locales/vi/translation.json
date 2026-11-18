@@ -1,7 +1,7 @@
 {
   "calendar": "Lịch",
   "webhooks": "Webhook",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhook là một cách để nhận thông báo khi có sự kiện xảy ra trong Postiz thông qua một yêu cầu HTTP.",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhook là một cách để nhận thông báo khi có sự kiện xảy ra trong Q and A Social Manager thông qua một yêu cầu HTTP.",
   "name": "Tên",
   "url": "URL",
   "edit": "Chỉnh sửa",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "Tôi có thể tin tưởng Postiz không?",
   "faq_postiz_gitroom_is_proudly_open_source": "Postiz tự hào là mã nguồn mở! Chúng tôi tin vào một văn hóa đạo đức và minh bạch, nghĩa là Postiz sẽ tồn tại mãi mãi. Bạn có thể xem toàn bộ mã nguồn hoặc sử dụng cho các dự án cá nhân. Để xem kho mã nguồn mở, <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">bấm vào đây</a>.",
   "faq_what_are_channels": "Kênh là gì?",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz cho phép bạn lên lịch đăng bài trên các kênh khác nhau.\nMột kênh là một nền tảng xuất bản nơi bạn có thể lên lịch đăng bài.\nVí dụ, bạn có thể lên lịch đăng bài trên X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads và Pinterest.",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager cho phép bạn lên lịch đăng bài trên các kênh khác nhau.\nMột kênh là một nền tảng xuất bản nơi bạn có thể lên lịch đăng bài.\nVí dụ, bạn có thể lên lịch đăng bài trên X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads và Pinterest.",
   "faq_what_are_team_members": "Thành viên nhóm là gì?",
   "faq_if_you_have_a_team_with_multiple_members": "Nếu bạn có một nhóm với nhiều thành viên, bạn có thể mời họ vào không gian làm việc để cùng cộng tác đăng bài và thêm các kênh cá nhân của họ",
   "faq_what_is_ai_auto_complete": "Tự động hoàn thành bằng AI là gì?",
@@ -609,7 +609,7 @@
   "select_channels": "Chọn kênh",
   "start_a_new_chat": "Bắt đầu cuộc trò chuyện mới",
   "your_assistant": "Trợ lý của bạn",
-  "agent_welcome_message": "Xin chào, tôi là trợ lý Postiz của bạn 🙌🏻.\n\nTôi có thể lên lịch đăng một hoặc nhiều bài viết lên nhiều kênh khác nhau và tạo ra hình ảnh, video.\n\nBạn có thể chọn các kênh muốn sử dụng từ menu bên trái.\n\nBạn có thể xem các cuộc trò chuyện trước đây của mình ở menu bên phải.\n\nBạn cũng có thể sử dụng tôi như một Máy chủ MCP, kiểm tra tại Cài đặt >> Đại lý / Dev",
+  "agent_welcome_message": "Xin chào, tôi là trợ lý Q and A Social Manager của bạn 🙌🏻.\n\nTôi có thể lên lịch đăng một hoặc nhiều bài viết lên nhiều kênh khác nhau và tạo ra hình ảnh, video.\n\nBạn có thể chọn các kênh muốn sử dụng từ menu bên trái.\n\nBạn có thể xem các cuộc trò chuyện trước đây của mình ở menu bên phải.\n\nBạn cũng có thể sử dụng tôi như một Máy chủ MCP, kiểm tra tại Cài đặt >> Đại lý / Dev",
   "last_github_trending": "Xu hướng Github gần đây",
   "next_predicted_github_trending": "Dự đoán xu hướng Github tiếp theo",
   "repository": "Kho lưu trữ",
@@ -894,6 +894,6 @@
   "trial": "Dùng thử",
   "thumbnails_and_alt_text": "Hình thu nhỏ & văn bản thay thế",
   "media_settings_section_description": "Nhấp vào một mục phương tiện để đặt văn bản thay thế hoặc thay đổi hình thu nhỏ nếu đó là video.",
-  "media_settings_section_tooltip": "Hình thu nhỏ được áp dụng cho các video trong bài đăng chính và được gửi đến mọi kênh hỗ trợ chúng. YouTube có thể bỏ qua hình thu nhỏ trên các video mà họ coi là Shorts (dọc, tối đa 3 phút) mà không làm thất bại việc đăng tải, và yêu cầu kênh đã xác minh số điện thoại để sử dụng hình thu nhỏ tùy chỉnh. Nếu YouTube từ chối hình thu nhỏ thì video vẫn được đăng, và Postiz không thể kiểm tra điều kiện đủ từ trước.",
+  "media_settings_section_tooltip": "Hình thu nhỏ được áp dụng cho các video trong bài đăng chính và được gửi đến mọi kênh hỗ trợ chúng. YouTube có thể bỏ qua hình thu nhỏ trên các video mà họ coi là Shorts (dọc, tối đa 3 phút) mà không làm thất bại việc đăng tải, và yêu cầu kênh đã xác minh số điện thoại để sử dụng hình thu nhỏ tùy chỉnh. Nếu YouTube từ chối hình thu nhỏ thì video vẫn được đăng, và Q and A Social Manager không thể kiểm tra điều kiện đủ từ trước.",
   "youtube_thumbnail_overrides_media": "Bài viết này có hình thu nhỏ riêng cho YouTube, thay thế hình thu nhỏ được đặt trong cài đặt phương tiện."
 }

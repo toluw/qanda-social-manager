@@ -1,7 +1,7 @@
 {
   "calendar": "カレンダー",
   "webhooks": "ウェブフック",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "ウェブフックは、Postizで何かが起こったときにHTTPリクエストを通じて通知を受け取る方法です。",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "ウェブフックは、Q and A Social Managerで何かが起こったときにHTTPリクエストを通じて通知を受け取る方法です。",
   "name": "名前",
   "url": "URL",
   "edit": "編集",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "Postizは信頼できますか？",
   "faq_postiz_gitroom_is_proudly_open_source": "Postizは誇りを持ってオープンソースです！私たちは倫理的で透明性のある文化を信じており、Postizは永遠に存続します。全てのコードを確認したり、個人プロジェクトで利用したりできます。オープンソースリポジトリを見るには、<a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">こちらをクリック</a>してください。",
   "faq_what_are_channels": "チャンネルとは何ですか？",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postizでは、さまざまなチャンネル間で投稿のスケジューリングが可能です。\nチャンネルとは、投稿をスケジュールできる配信プラットフォームのことです。\n例えば、X、Facebook、Instagram、TikTok、YouTube、Reddit、Linkedin、Dribbble、Threads、Pinterestなどで投稿をスケジュールできます。",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Managerでは、さまざまなチャンネル間で投稿のスケジューリングが可能です。\nチャンネルとは、投稿をスケジュールできる配信プラットフォームのことです。\n例えば、X、Facebook、Instagram、TikTok、YouTube、Reddit、Linkedin、Dribbble、Threads、Pinterestなどで投稿をスケジュールできます。",
   "faq_what_are_team_members": "チームメンバーとは何ですか？",
   "faq_if_you_have_a_team_with_multiple_members": "複数のメンバーがいるチームの場合、ワークスペースに招待して投稿の共同作業や個人チャンネルの追加ができます",
   "faq_what_is_ai_auto_complete": "AI自動補完とは何ですか？",
@@ -609,7 +609,7 @@
   "select_channels": "チャンネルを選択",
   "start_a_new_chat": "新しいチャットを開始",
   "your_assistant": "あなたのアシスタント",
-  "agent_welcome_message": "こんにちは、私はあなたのPostizエージェントです🙌🏻。\n\n複数のチャンネルへの投稿をスケジュールしたり、画像や動画を生成したりできます。\n\n左側のメニューから使用したいチャンネルを選択できます。\n\n右側のメニューで、これまでの会話履歴を確認できます。\n\nまた、MCPサーバーとして利用することもでき、「設定」>>「エージェント / Dev」で設定を確認できます。",
+  "agent_welcome_message": "こんにちは、私はあなたのQ and A Social Managerエージェントです🙌🏻。\n\n複数のチャンネルへの投稿をスケジュールしたり、画像や動画を生成したりできます。\n\n左側のメニューから使用したいチャンネルを選択できます。\n\n右側のメニューで、これまでの会話履歴を確認できます。\n\nまた、MCPサーバーとして利用することもでき、「設定」>>「エージェント / Dev」で設定を確認できます。",
   "last_github_trending": "最新のGitHubトレンド",
   "next_predicted_github_trending": "次に予測されるGitHubトレンド",
   "repository": "リポジトリ",
@@ -894,6 +894,6 @@
   "trial": "トライアル",
   "thumbnails_and_alt_text": "サムネイルと代替テキスト",
   "media_settings_section_description": "メディアアイテムをクリックして、代替テキストや（動画の場合は）サムネイルを設定してください。",
-  "media_settings_section_tooltip": "サムネイルはメイン投稿の動画に適用され、対応しているすべてのチャンネルに送信されます。YouTubeでは、Shorts（縦型・最長3分）の動画として扱われる場合、サムネイルが無視されることがありますが、公開自体は失敗しません。カスタムサムネイルには、電話番号認証済みのチャンネルが必要です。YouTubeがサムネイルを却下した場合でも動画は公開されます。また、Postizでは事前にサムネイルの利用可否を確認することはできません。",
+  "media_settings_section_tooltip": "サムネイルはメイン投稿の動画に適用され、対応しているすべてのチャンネルに送信されます。YouTubeでは、Shorts（縦型・最長3分）の動画として扱われる場合、サムネイルが無視されることがありますが、公開自体は失敗しません。カスタムサムネイルには、電話番号認証済みのチャンネルが必要です。YouTubeがサムネイルを却下した場合でも動画は公開されます。また、Q and A Social Managerでは事前にサムネイルの利用可否を確認することはできません。",
   "youtube_thumbnail_overrides_media": "この投稿にはYouTube専用のサムネイルが設定されており、メディア設定で設定したサムネイルは上書きされます。"
 }

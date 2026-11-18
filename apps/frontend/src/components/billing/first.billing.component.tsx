@@ -1,5 +1,9 @@
 'use client';
 
+import { LegalLink } from '@gitroom/frontend/components/ui/legal-link.component';
+
+import { APP_NAME } from '@gitroom/frontend/branding';
+
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
@@ -15,7 +19,6 @@ import { pricing } from '@gitroom/nestjs-libraries/database/prisma/subscriptions
 import { capitalize } from 'lodash';
 import clsx from 'clsx';
 import { LoadingComponent } from '@gitroom/frontend/components/layout/loading';
-import { CheckIconComponent } from '@gitroom/frontend/components/ui/check.icon.component';
 import {
   FAQComponent,
   FAQSection,
@@ -90,12 +93,18 @@ export const FirstBillingComponent = () => {
 
   const showYouTube = () => {
     modals.openModal({
-      title: 'Grow Fast With Postiz (Play the video)',
+      title: t(
+        'qanda_upstream_tutorial_title',
+        'Postiz tutorial (upstream project)'
+      ),
       children: (
         <iframe
           className="h-full aspect-video min-w-[800px]"
           src="https://www.youtube.com/embed/BdsCVvEYgHU?si=vvhaZJ8I5oXXvVJS?autoplay=1"
-          title="Postiz Tutorial"
+          title={t(
+            'qanda_upstream_tutorial_title',
+            'Postiz tutorial (upstream project)'
+          )}
           allow="autoplay"
           allowFullScreen
         />
@@ -130,15 +139,7 @@ export const FirstBillingComponent = () => {
     return (
       <>
         <div className="text-[46px] font-[600] leading-[110%] tablet:text-[36px] mobile:!text-[30px] whitespace-pre-line text-balance">
-          {t('billing_join_over', 'Join Over')}{' '}
-          <span className="text-[#FC69FF]">
-            {t('billing_entrepreneurs_count', '20,000+ Entrepreneurs')}
-          </span>{' '}
-          {t('billing_who_use', 'who use')}{' '}
-          {t(
-            'billing_postiz_grow_social',
-            'Postiz To Grow Their Social Presence'
-          )}
+          {APP_NAME}
         </div>
 
         <div className="flex" onClick={showYouTube}>
@@ -152,39 +153,27 @@ export const FirstBillingComponent = () => {
                 alt="YouTube"
               />
             </div>
-            <div>See the power of Postiz (click here)</div>
+            <div>
+              {t(
+                'qanda_upstream_tutorial_title',
+                'Postiz tutorial (upstream project)'
+              )}
+            </div>
           </div>
         </div>
 
-        {!!user?.allowTrial && (
-          <div className="flex mt-[32px] mb-[10px] gap-[15px] tablet:mt-[32px] tablet:mb-[32px] text-[16px] font-[500] mobile:flex-col">
-            <div className="flex gap-[8px]">
-              <div>
-                <CheckIconComponent />
-              </div>
-              <div>{t('billing_no_risk_trial', '100% No-Risk Free Trial')}</div>
-            </div>
-            <div className="flex-1 flex gap-[8px] justify-center mobile:justify-start">
-              <div>
-                <CheckIconComponent />
-              </div>
-              <div>
-                {t(
-                  'billing_pay_nothing_7_days',
-                  'Pay NOTHING for the first 7-days'
-                )}
-              </div>
-            </div>
-            <div className="flex gap-[8px]">
-              <div>
-                <CheckIconComponent />
-              </div>
-              <div>
-                {t('billing_cancel_anytime', 'Cancel anytime, from settings')}
-              </div>
-            </div>
-          </div>
-        )}
+        <p className="mt-[24px] text-[16px]">
+          {t(
+            'qanda_upstream_tutorial_description',
+            'This tutorial covers the upstream Postiz application. Branding and some screens may differ from Q and A Social Manager.'
+          )}
+        </p>
+        <p className="mt-[16px] text-[16px]">
+          {t(
+            'qanda_review_plan_details',
+            'Review the selected plan and checkout details before subscribing.'
+          )}
+        </p>
       </>
     );
   };
@@ -193,7 +182,10 @@ export const FirstBillingComponent = () => {
     <div className="blurMe flex flex-1 flex-col bg-newBgColorInner pb-[60px] mobile:pb-[100px]">
       <div className="h-[92px] px-[80px] tablet:px-[32px] mobile:!px-[16px] py-[20px] flex border-b border-newColColor">
         <div className="flex-1 flex items-center text-textColor">
-          <LogoTextComponent />
+          <div className="flex flex-wrap items-center gap-[12px]">
+            <LogoTextComponent />
+            <LegalLink />
+          </div>
         </div>
         <div className="flex items-center">
           <div className="flex gap-[20px] text-textItemBlur">
@@ -277,9 +269,6 @@ export const FirstBillingComponent = () => {
                   onClick={() => setPeriod('YEARLY')}
                 >
                   <div>{t('billing_yearly', 'Yearly')}</div>
-                  <div className="bg-[#AA0FA4] text-[white] px-[8px] rounded-[4px] mobile:hidden">
-                    {t('billing_20_percent_off', '20% Off')}
-                  </div>
                 </div>
               </div>
             </div>

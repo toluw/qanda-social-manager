@@ -1,7 +1,7 @@
 {
   "calendar": "日历",
   "webhooks": "Webhook（网络钩子）",
-  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhook 是一种通过 HTTP 请求在 Postiz 中有事件发生时获得通知的方式。",
+  "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "Webhook 是一种通过 HTTP 请求在 Q and A Social Manager 中有事件发生时获得通知的方式。",
   "name": "名称",
   "url": "URL",
   "edit": "编辑",
@@ -464,7 +464,7 @@
   "faq_can_i_trust_postiz_gitroom": "我可以信任Postiz吗？",
   "faq_postiz_gitroom_is_proudly_open_source": "Postiz自豪地开源！我们相信道德和透明的文化，这意味着Postiz将永远存在。您可以查看全部代码或将其用于个人项目。要查看开源仓库，<a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">请点击这里</a>。",
   "faq_what_are_channels": "什么是频道？",
-  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz允许您在不同频道之间安排您的帖子。\n频道是一个发布平台，您可以在上面安排您的帖子。\n例如，您可以在X、Facebook、Instagram、TikTok、YouTube、Reddit、Linkedin、Dribbble、Threads和Pinterest上安排您的帖子。",
+  "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager允许您在不同频道之间安排您的帖子。\n频道是一个发布平台，您可以在上面安排您的帖子。\n例如，您可以在X、Facebook、Instagram、TikTok、YouTube、Reddit、Linkedin、Dribbble、Threads和Pinterest上安排您的帖子。",
   "faq_what_are_team_members": "什么是团队成员？",
   "faq_if_you_have_a_team_with_multiple_members": "如果你有一个包含多名成员的团队，你可以邀请他们加入你的工作区，共同协作发布内容，并添加他们的个人频道。",
   "faq_what_is_ai_auto_complete": "什么是 AI 自动补全？",
@@ -609,7 +609,7 @@
   "select_channels": "选择频道",
   "start_a_new_chat": "开始新聊天",
   "your_assistant": "你的助手",
-  "agent_welcome_message": "你好，我是你的 Postiz 智能助手 🙌🏻。\n\n我可以帮你安排单个或多个频道的帖子，并生成图片和视频。\n\n你可以在左侧菜单中选择你想使用的频道。\n\n你可以在右侧菜单查看你之前的对话记录。\n\n你也可以将我用作 MCP 服务器，请前往设置 >> 智能助手 / 开发者。",
+  "agent_welcome_message": "你好，我是你的 Q and A Social Manager 智能助手 🙌🏻。\n\n我可以帮你安排单个或多个频道的帖子，并生成图片和视频。\n\n你可以在左侧菜单中选择你想使用的频道。\n\n你可以在右侧菜单查看你之前的对话记录。\n\n你也可以将我用作 MCP 服务器，请前往设置 >> 智能助手 / 开发者。",
   "last_github_trending": "最新 Github 趋势",
   "next_predicted_github_trending": "下一个预测的 Github 趋势",
   "repository": "仓库",
@@ -894,6 +894,6 @@
   "trial": "试用",
   "thumbnails_and_alt_text": "缩略图与替代文本",
   "media_settings_section_description": "点击媒体项为其设置替代文本，如果是视频，还可以设置其缩略图。",
-  "media_settings_section_tooltip": "缩略图适用于主帖中的视频，并会发送到每个支持缩略图的频道。YouTube 可能会对被视为 Shorts（竖屏、时长不超过 3 分钟）的视频忽略缩略图，但不会导致发布失败，并且自定义缩略图需要经过手机验证的频道。如果 YouTube 拒绝了缩略图，视频仍将发布，且 Postiz 无法提前检查其资格。",
+  "media_settings_section_tooltip": "缩略图适用于主帖中的视频，并会发送到每个支持缩略图的频道。YouTube 可能会对被视为 Shorts（竖屏、时长不超过 3 分钟）的视频忽略缩略图，但不会导致发布失败，并且自定义缩略图需要经过手机验证的频道。如果 YouTube 拒绝了缩略图，视频仍将发布，且 Q and A Social Manager 无法提前检查其资格。",
   "youtube_thumbnail_overrides_media": "该帖子有专门针对 YouTube 的缩略图，会覆盖在媒体设置中设定的缩略图。"
 }

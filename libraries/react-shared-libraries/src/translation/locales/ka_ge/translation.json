@@ -1,7 +1,7 @@
 {
     "calendar": "კალენდარი",
     "webhooks": "ვებჰუქები",
-    "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "ვებჰუქები საშუალებას გაძლევთ მიიღოთ შეტყობინება, როცა Postiz-ში რაიმე ხდება HTTP მოთხოვნის მეშვეობით.",
+    "webhooks_are_a_way_to_get_notified_when_something_happens_in_postiz_via_an_http_request": "ვებჰუქები საშუალებას გაძლევთ მიიღოთ შეტყობინება, როცა Q and A Social Manager-ში რაიმე ხდება HTTP მოთხოვნის მეშვეობით.",
     "name": "სახელი",
     "url": "ბმული",
     "edit": "რედაქტირება",
@@ -457,7 +457,7 @@
     "faq_can_i_trust_postiz": "შემიძლია ვენდო Postiz-ს?",
     "faq_postiz_gitroom_is_proudly_open_source": "Postiz არის ღია კოდის! გამჭვირვალე კულტურა — შეგიძლიათ ნახოთ მთელი კოდი ან გამოიყენოთ პირადი პროექტებისთვის. ღია რეპოზიტორიის სანახავად <a href=\"https://github.com/gitroomhq/postiz-app\" target=\"_blank\" style=\"text-decoration: underline;\">დააჭირეთ აქ</a>.",
     "faq_what_are_channels": "რა არის არხები?",
-    "faq_postiz_gitroom_allows_you_to_schedule_posts": "Postiz გაძლევთ პოსტების დაგეგმვის საშუალებას სხვადასხვა არხებზე — მაგალითად X, Facebook, Instagram, TikTok, YouTube, Reddit, LinkedIn, Dribbble, Threads და Pinterest.",
+    "faq_postiz_gitroom_allows_you_to_schedule_posts": "Q and A Social Manager გაძლევთ პოსტების დაგეგმვის საშუალებას სხვადასხვა არხებზე — მაგალითად X, Facebook, Instagram, TikTok, YouTube, Reddit, LinkedIn, Dribbble, Threads და Pinterest.",
     "faq_what_are_team_members": "რა არის გუნდის წევრები?",
     "faq_if_you_have_a_team_with_multiple_members": "თუ თქვენ ჰყავთ გუნდი რამდენიმე წევრით, შეგიძლიათ მოიწვიოთ ისინი workspace-ში, ითანამშრომლოთ პოსტებზე და დაამატონ თავიანთი არხები",
     "faq_what_is_ai_auto_complete": "რა არის AI auto-complete?",

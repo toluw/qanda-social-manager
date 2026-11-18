@@ -1,5 +1,7 @@
 'use client';
 
+import { APP_NAME } from '@gitroom/frontend/branding';
+
 import { FC, useCallback, useState } from 'react';
 import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import useSWR from 'swr';
@@ -223,7 +225,7 @@ export const DeveloperComponent: FC = () => {
         <div className="text-[14px] text-textColor leading-[1.7]">
           {t(
             'oauth_app_note_line1',
-            'Create an OAuth App to let other Postiz users authorize your product to post on their behalf.'
+            `Create an OAuth App to let other ${APP_NAME} users authorize your product to post on their behalf.`
           )}
           <br />
           {t(
@@ -240,13 +242,13 @@ export const DeveloperComponent: FC = () => {
               <div className="text-[13px] text-customColor18 mt-[2px]">
                 {t(
                   'create_an_oauth_application',
-                  'Create an OAuth application to allow third-party integrations with Postiz on behalf of your users.'
+                  `Create an OAuth application to allow third-party integrations with ${APP_NAME} on behalf of your users.`
                 )}
               </div>
             </div>
             <div className="flex flex-wrap gap-[6px] shrink-0 pt-[2px]">
               <a
-                className="cursor-pointer px-[16px] h-[36px] bg-[#612BD3] hover:bg-[#5520CB] text-white transition-colors rounded-[8px] text-[13px] font-[600] flex items-center gap-[6px]"
+                className="cursor-pointer px-[16px] h-[36px] qanda-action hover:bg-neutral-800 text-white transition-colors rounded-[8px] text-[13px] font-[600] flex items-center gap-[6px]"
                 href="https://docs.postiz.com/public-api/oauth"
                 target="_blank"
               >
@@ -259,7 +261,7 @@ export const DeveloperComponent: FC = () => {
             <button
               type="button"
               onClick={() => setCreating(true)}
-              className="cursor-pointer px-[20px] h-[44px] bg-[#612BD3] hover:bg-[#5520CB] transition-colors text-white rounded-[8px] text-[15px] font-[600]"
+              className="cursor-pointer px-[20px] h-[44px] qanda-action hover:bg-neutral-800 transition-colors text-white rounded-[8px] text-[15px] font-[600]"
             >
               {t('create_oauth_app', 'Create OAuth App')}
             </button>
@@ -276,7 +278,7 @@ export const DeveloperComponent: FC = () => {
         <div className="text-[14px] text-textColor leading-[1.7]">
           {t(
             'oauth_app_note_line1',
-            'Create an OAuth App to let other Postiz users authorize your product to post on their behalf.'
+            `Create an OAuth App to let other ${APP_NAME} users authorize your product to post on their behalf.`
           )}
           <br />
           {t(
@@ -361,7 +363,7 @@ export const DeveloperComponent: FC = () => {
               <button
                 type="button"
                 onClick={createApp}
-                className="cursor-pointer px-[20px] h-[44px] bg-[#612BD3] hover:bg-[#5520CB] transition-colors text-white rounded-[8px] text-[15px] font-[600]"
+                className="cursor-pointer px-[20px] h-[44px] qanda-action hover:bg-neutral-800 transition-colors text-white rounded-[8px] text-[15px] font-[600]"
               >
                 {t('create', 'Create')}
               </button>
@@ -385,7 +387,7 @@ export const DeveloperComponent: FC = () => {
       <div className="text-[14px] text-textColor leading-[1.7]">
         {t(
           'oauth_app_note_line1',
-          'Create an OAuth App to let other Postiz users authorize your product to post on their behalf.'
+          `Create an OAuth App to let other ${APP_NAME} users authorize your product to post on their behalf.`
         )}
         <br />
         {t(
@@ -409,7 +411,7 @@ export const DeveloperComponent: FC = () => {
           </div>
           <div className="flex flex-wrap gap-[6px] shrink-0 pt-[2px]">
             <a
-              className="cursor-pointer px-[16px] h-[36px] bg-[#612BD3] hover:bg-[#5520CB] text-white transition-colors rounded-[8px] text-[13px] font-[600] flex items-center gap-[6px]"
+              className="cursor-pointer px-[16px] h-[36px] qanda-action hover:bg-neutral-800 text-white transition-colors rounded-[8px] text-[13px] font-[600] flex items-center gap-[6px]"
               href="https://docs.postiz.com/public-api/oauth"
               target="_blank"
             >
@@ -485,7 +487,7 @@ export const DeveloperComponent: FC = () => {
               <button
                 type="button"
                 onClick={updateApp}
-                className="cursor-pointer px-[20px] h-[44px] bg-[#612BD3] hover:bg-[#5520CB] transition-colors text-white rounded-[8px] text-[15px] font-[600]"
+                className="cursor-pointer px-[20px] h-[44px] qanda-action hover:bg-neutral-800 transition-colors text-white rounded-[8px] text-[15px] font-[600]"
               >
                 {t('save', 'Save')}
               </button>

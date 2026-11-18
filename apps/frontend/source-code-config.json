@@ -1,0 +1,7 @@
+{
+  "_instructions": "PLACEHOLDER: Set repositoryUrl only after the operator approves the company GitHub URL. Set releaseCommit to the full commit containing this version's complete modified source. Mark urlApproved and sourcePublished true only after approval and verified public publication. Then run python3 apps/frontend/scripts/prepare-source-page.py from the repository root. This does not authorize deployment.",
+  "repositoryUrl": "",
+  "releaseCommit": "",
+  "urlApproved": false,
+  "sourcePublished": false
+}

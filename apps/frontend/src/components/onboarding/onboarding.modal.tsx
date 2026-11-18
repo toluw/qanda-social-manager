@@ -228,7 +228,7 @@ const OnboardingStep1: FC<{ onNext: () => void; onSkip: () => void }> = ({
       <div className="flex justify-end pt-[24px] mt-[8px]">
         <button
           onClick={onNext}
-          className="group flex items-center gap-[12px] bg-gradient-to-r from-[#622aff] to-[#8b5cf6] hover:from-[#7c3aff] hover:to-[#9d6eff] text-white font-semibold px-[32px] py-[14px] rounded-[12px] text-[16px] transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+          className="group flex items-center gap-[12px] qanda-action hover:bg-neutral-800 text-white font-semibold px-[32px] py-[14px] rounded-[12px] text-[16px] transition-all shadow-lg shadow-black/25 hover:shadow-black/40"
         >
           {sortedIntegrations.length > 0
             ? t('continue', 'Continue')
@@ -392,7 +392,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onNext: () => void }> = ({
           </div>
         </div>
         <a
-          className="cursor-pointer px-[24px] h-[44px] bg-[#612BD3] hover:bg-[#5520CB] text-white transition-colors rounded-[8px] text-[14px] font-[600] flex items-center gap-[8px] shrink-0"
+          className="cursor-pointer px-[24px] h-[44px] qanda-action hover:bg-neutral-800 text-white transition-colors rounded-[8px] text-[14px] font-[600] flex items-center gap-[8px] shrink-0"
           href="https://docs.postiz.com/public-api/introduction"
           target="_blank"
         >
@@ -451,7 +451,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onNext: () => void }> = ({
         </div>
       </div>
       <a
-        className="cursor-pointer px-[24px] h-[44px] bg-[#612BD3] hover:bg-[#5520CB] text-white transition-colors rounded-[8px] text-[14px] font-[600] flex items-center gap-[8px] shrink-0"
+        className="cursor-pointer px-[24px] h-[44px] qanda-action hover:bg-neutral-800 text-white transition-colors rounded-[8px] text-[14px] font-[600] flex items-center gap-[8px] shrink-0"
         href={connector.href}
         target="_blank"
       >
@@ -485,7 +485,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onNext: () => void }> = ({
                 className={clsx(
                   'cursor-pointer px-[14px] h-[36px] text-[13px] font-[500] rounded-[8px] transition-colors',
                   auth === m
-                    ? 'bg-[#612BD3] text-white'
+                    ? 'qanda-action text-white'
                     : 'bg-btnSimple text-customColor18 hover:bg-boxHover hover:text-textColor'
                 )}
                 onClick={() => setAuth(m)}
@@ -575,7 +575,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onNext: () => void }> = ({
                 className={clsx(
                   'cursor-pointer px-[14px] h-[36px] text-[13px] font-[500] rounded-[8px] transition-colors flex items-center gap-[8px]',
                   tab === item
-                    ? 'bg-[#612BD3] text-white'
+                    ? 'qanda-action text-white'
                     : item === apiTab
                     ? 'bg-btnSimple text-[#a78bfa] hover:bg-boxHover hover:text-[#c4b5fd]'
                     : 'bg-btnSimple text-customColor18 hover:bg-boxHover hover:text-textColor'
@@ -596,7 +596,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onNext: () => void }> = ({
                   className={clsx(
                     'cursor-pointer px-[12px] h-[32px] text-[12px] font-[500] rounded-[8px] transition-colors flex items-center gap-[6px]',
                     otherAgent === item
-                      ? 'bg-[#612BD3] text-white'
+                      ? 'qanda-action text-white'
                       : 'bg-btnSimple text-customColor18 hover:bg-boxHover hover:text-textColor'
                   )}
                   onClick={() => setOtherAgent(item)}
@@ -665,7 +665,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onNext: () => void }> = ({
         </div>
         <button
           onClick={onNext}
-          className="group flex items-center gap-[12px] bg-gradient-to-r from-[#622aff] to-[#8b5cf6] hover:from-[#7c3aff] hover:to-[#9d6eff] text-white font-semibold px-[32px] py-[14px] rounded-[12px] text-[16px] transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+          className="group flex items-center gap-[12px] qanda-action hover:bg-neutral-800 text-white font-semibold px-[32px] py-[14px] rounded-[12px] text-[16px] transition-all shadow-lg shadow-black/25 hover:shadow-black/40"
         >
           {t('continue_skip', 'Continue / Skip')}
           <svg
@@ -699,12 +699,15 @@ const OnboardingStep3: FC<{ onBack: () => void; onFinish: () => void }> = ({
     <div className="flex flex-col gap-[24px] flex-1">
       <div className="flex gap-[4px] flex-col text-center">
         <div className="text-[24px] font-semibold">
-          {t('watch_tutorial_title', 'Learn How to Use Postiz')}
+          {t(
+            'qanda_upstream_tutorial_title',
+            'Postiz tutorial (upstream project)'
+          )}
         </div>
         <div className="text-[14px] text-customColor18">
           {t(
-            'watch_tutorial_description',
-            'Watch this short video to learn how to get the most out of Postiz'
+            'qanda_upstream_tutorial_description',
+            'This tutorial covers the upstream Postiz application. Branding and some screens may differ from Q and A Social Manager.'
           )}
         </div>
       </div>
@@ -715,7 +718,10 @@ const OnboardingStep3: FC<{ onBack: () => void; onFinish: () => void }> = ({
           <iframe
             className="h-full aspect-video"
             src="https://www.youtube.com/embed/BdsCVvEYgHU?si=vvhaZJ8I5oXXvVJS?autoplay=1"
-            title="Postiz Tutorial"
+            title={t(
+              'qanda_upstream_tutorial_title',
+              'Postiz tutorial (upstream project)'
+            )}
             allow="autoplay"
             allowFullScreen
           />

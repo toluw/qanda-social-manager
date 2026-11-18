@@ -158,7 +158,7 @@ export const DatePickerPanel: FC<{
                   : modifiers.outside
                   ? '!text-newTextColor/20 !font-[400]'
                   : dayjs(day).isSame(toPickerDate(newDayjs()), 'day')
-                  ? '!text-[#FC69FF] !font-[600]'
+                  ? '!text-brandAccent !font-[600]'
                   : '!text-textItemBlur !font-[400]'
               )
             }
@@ -251,7 +251,7 @@ export const DatePickerPanel: FC<{
           return '!text-textColor';
         }}
         classNames={{
-          day: 'hover:bg-seventh',
+          day: 'hover:bg-seventh hover:text-white',
           calendarHeaderControl: 'text-textColor hover:bg-third',
           calendarHeaderLevel: 'text-textColor hover:bg-third', // cell: 'child:!text-textColor'
         }}
