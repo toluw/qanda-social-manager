@@ -8,7 +8,8 @@ The covered application and modifications retain the GNU AGPL-3.0 license.
 See [build instructions](docs/BUILDING.md), [modification record](docs/MODIFICATIONS.md),
 [third-party notices](THIRD_PARTY_NOTICES.md), and the original [license](LICENSE).
 Build/browser validation and the dependency/font notice review remain pending.
-The frontend source offer stays pending until publication has been verified.
+Published modified source: https://github.com/toluw/qanda-social-manager.
+The application source link is pinned to a verified published commit.
 
 The upstream README follows for project context. Its marketing claims, hosted
 service links and installation examples describe upstream Postiz; they are not

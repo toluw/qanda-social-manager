@@ -26,8 +26,9 @@ including actual deployment secrets.
 Use an isolated development environment. Do not connect to production databases,
 Redis, Temporal, storage, OAuth credentials or social accounts for build checks.
 
-1. Obtain the exact approved source revision of the company repository. No URL
-   is supplied here because the company account/organization is not yet approved.
+1. Obtain the exact source revision from
+   https://github.com/toluw/qanda-social-manager. Use the release commit recorded
+   in the source configuration rather than an unpinned branch.
 2. The root manifest specifies Node.js `22.23.4` and pnpm `10.6.1`. Its Volta field
    instead specifies Node `20.17.0`; resolve that discrepancy for the release
    build and record the toolchain actually validated. Python 3 is needed only
@@ -72,17 +73,18 @@ Redis, Temporal, storage, OAuth credentials or social accounts for build checks.
    The root `pnpm run start:prod:frontend` runs the built frontend, not the other
    application services. Neither command deploys to the VPS.
 
-## Configurable Source Code placeholder
+## Configurable Source Code offer
 
-The source page is `/legal.html#source`. Its settings are in
+The source page is `/legal.html#source`. Publication has now been verified for
+the revision below. Its settings are in
 `apps/frontend/source-code-config.json`, not an environment file:
 
 | Field | Current value | Required before enabling links |
 | --- | --- | --- |
 | `repositoryUrl` | `https://github.com/toluw/qanda-social-manager` (approved; publication pending) | Operator-approved company GitHub repository URL ending in `/qanda-social-manager` |
-| `releaseCommit` | Empty placeholder | Full 40-character commit of the complete published modified source |
+| `releaseCommit` | `0dd05df2ad34499f48bde7dfb819a52f374394a4` | Full 40-character commit of the complete published modified source |
 | `urlApproved` | `true` | Explicit operator approval of the final URL |
-| `sourcePublished` | `false` | Verified public publication of the complete modified source |
+| `sourcePublished` | `true` | Verified public publication of the complete modified source |
 
 While either flag is false, the page shows a pending notice and has no derivative
 download link. The upstream Postiz link remains attribution only. Do not enter a
@@ -125,3 +127,14 @@ the manual verification below is still mandatory.
 Until the final URL is approved and modified source is published and verified,
 source access is **incomplete**. No application publication or deployment should
 proceed on the basis of this placeholder preparation.
+
+## Publication verification recorded
+
+The company URL above was approved and source revision `0dd05df2ad34499f48bde7dfb819a52f374394a4`
+was downloaded anonymously on 2026-11-17. Required source files were present.
+The source-page follow-up is reproducible from that commit using the configuration
+values in the table and the included preparation script. It changes generated
+legal/source information and publication records only. Build verification,
+Charter licensing and the dependency notice inventory remain pending; the
+placeholder descriptions above document how disabled states behave, not the
+current publication state. Deployment remains separately authorized.

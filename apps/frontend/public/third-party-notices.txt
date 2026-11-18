@@ -54,17 +54,13 @@ plus applicable dependency source and notices. Do not include credentials,
 tokens, private configuration or user data.
 
 The operator approved https://github.com/toluw/qanda-social-manager as the
-company source repository. Publication has not been confirmed: the first push
-was denied because the locally authenticated GitHub account lacks write access.
-`apps/frontend/source-code-config.json` records the approved URL, an empty
-`releaseCommit`, `urlApproved: true` and `sourcePublished: false`. There is no
-working modified-source download offer yet.
+company source repository. Revision `0dd05df2ad34499f48bde7dfb819a52f374394a4` was published
+and its archive downloaded without authentication on 2026-11-17. Required source
+files were checked against the local revision. No deployment is claimed.
 
-After explicit URL approval and verified publication, record the exact release
-commit and regenerate the static Source Code section with
-`python3 apps/frontend/scripts/prepare-source-page.py`. The script does not
-publish anything or verify remote availability. See `docs/BUILDING.md` for
-preparation and verification instructions. The source-access requirement remains
-incomplete until the actual modified source is publicly available and the
-application offers working access to it. No deployment is authorized by setting
-these fields.
+The static Source Code section is generated from
+`apps/frontend/source-code-config.json` with
+`python3 apps/frontend/scripts/prepare-source-page.py`. Its approval and publication
+flags record verified repository access, not a completed build or exhaustive
+compliance audit. See `docs/BUILDING.md` for release inputs and remaining checks.
+The Charter font provenance and full dependency notice review remain pending.

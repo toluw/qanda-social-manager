@@ -74,3 +74,21 @@ pairs; rendered browser, build and lint verification remain pending.
   backup and isolated staging requirements in `docs/BRANDING_BRIEF.md`.
 
 No build, production deployment or source publication is claimed by this record.
+
+## Source publication record — 2026-11-17
+
+Published the full modified repository and preserved upstream history to
+https://github.com/toluw/qanda-social-manager, branch `main`. The source offer
+references `0dd05df2ad34499f48bde7dfb819a52f374394a4`. Anonymous archive download
+returned HTTP 200; required source files and selected content were verified.
+Operator-only AGENTS.md and BRANDING_BRIEF.md were excluded. Known credential
+patterns were checked across 11,208 ancestry blobs with no matches; this was not
+an exhaustive security audit.
+
+The following publication follow-up changes the source-offer configuration,
+generated legal HTML and publication documentation only. To reproduce the
+application with its enabled offer from the linked commit, set repositoryUrl to
+the company URL, releaseCommit to the hash above, and urlApproved/sourcePublished
+to true, then run the included preparation script before building. No application
+logic or styles change in this follow-up. Full build, runtime correspondence and
+license inventory checks remain pending; publication is not release approval.
