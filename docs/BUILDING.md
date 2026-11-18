@@ -147,3 +147,46 @@ legal/source information and publication records only. Build verification,
 Charter licensing and the dependency notice inventory remain pending; the
 placeholder descriptions above document how disabled states behave, not the
 current publication state. Deployment remains separately authorized.
+
+## Release image candidate (not yet deployed)
+
+`Dockerfile.release` builds Linux application artifacts using Node 22.23.4,
+pnpm 10.6.1 and the frozen lockfile. Dependencies install with lifecycle scripts
+disabled; bcrypt is rebuilt explicitly and Prisma client generation runs without
+connecting to a database. The frontend Webpack build, backend and orchestrator
+build sequentially. No database schema push or migration runs at image startup.
+
+After the complete source revision has been pushed to the public company repository:
+
+```sh
+docker buildx build --platform linux/amd64 -f Dockerfile.release \
+  --build-arg SOURCE_REVISION=FULL_PUBLISHED_40_CHARACTER_COMMIT \
+  --tag qanda-social-manager:RELEASE --load .
+```
+
+The release-specific ignore file excludes environment files, credentials, local
+dependencies and build output, while retaining licenses and notices. Public
+build arguments default to the existing installation's API URL, upload path and
+local storage. Never pass private production environment values into the build.
+The image-generation script pins its source offer to `SOURCE_REVISION`; this is
+a deterministic generation step available in that revision's source archive.
+
+The `Qanda release image (artifact only)` workflow builds on changes to its
+recipe/workflow on the security branch and also supports manual dispatch after
+the workflow is available on the default branch. It checks anonymous source
+availability and uploads the Linux amd64 image archive, checksum and source
+revision for seven days. It has read-only repository permissions and neither
+publishes a container registry package nor deploys to any server.
+
+The release startup script starts the existing backend, orchestrator, frontend
+and nginx entry points. It stops the other processes and exits when any child
+exits, allowing the existing container restart policy to recover. This startup
+path replaces the legacy PM2 wrapper specifically to avoid its automatic
+`prisma db push`; scheduling and provider source code are unchanged. Validate
+signal handling, authenticated flows and Temporal behavior in staging first.
+
+Frontend API URLs can be embedded at build time. When testing the production
+image locally, use browser request routing that allows localhost only and maps
+the production API prefix to staging. Container network isolation alone cannot
+prevent a browser from contacting production. Do not browse the restored app
+with an unrestricted browser or enable restored publishing credentials.

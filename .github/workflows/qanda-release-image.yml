@@ -1,0 +1,43 @@
+name: Qanda release image (artifact only)
+on:
+  push:
+    branches: [security/next-16.4.6]
+    paths: [.github/workflows/qanda-release-image.yml, Dockerfile.release, Dockerfile.release.dockerignore, scripts/deployment/start-release.sh, scripts/deployment/prepare-release-source.py]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: qanda-release-image-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.repository == 'toluw/qanda-social-manager'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      - name: Verify source is anonymously available
+        env:
+          RELEASE_REVISION: ${{ github.sha }}
+        run: curl --fail --location --retry 3 --output /dev/null "https://github.com/toluw/qanda-social-manager/archive/${RELEASE_REVISION}.tar.gz"
+      - name: Build Linux amd64 image
+        env:
+          RELEASE_REVISION: ${{ github.sha }}
+        run: |
+          docker buildx build --platform linux/amd64 -f Dockerfile.release \
+            --build-arg SOURCE_REVISION="$RELEASE_REVISION" \
+            --tag "qanda-social-manager:$RELEASE_REVISION" \
+            --output type=docker,dest=/tmp/qanda-social-manager.tar .
+          gzip -1 /tmp/qanda-social-manager.tar
+          sha256sum /tmp/qanda-social-manager.tar.gz > /tmp/qanda-image.sha256
+          printf '%s\n' "$RELEASE_REVISION" > /tmp/qanda-source-revision.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: qanda-linux-amd64-${{ github.sha }}
+          path: |
+            /tmp/qanda-social-manager.tar.gz
+            /tmp/qanda-image.sha256
+            /tmp/qanda-source-revision.txt
+          compression-level: 0
+          retention-days: 7

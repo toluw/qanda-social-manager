@@ -1,0 +1,61 @@
+name: qanda-restore-check
+services:
+  application-db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: staging
+      POSTGRES_DB: application_restore
+      # Disposable local databases only: no host ports, internal network.
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - application-db:/var/lib/postgresql/data
+    networks: [isolated]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U staging -d application_restore]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  temporal-db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: staging
+      POSTGRES_DB: temporal_restore
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - temporal-db:/var/lib/postgresql/data
+    networks: [isolated]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U staging -d temporal_restore]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7.2
+    networks: [isolated]
+    volumes:
+      - redis:/data
+  elasticsearch:
+    image: elasticsearch:7.17.27
+    platform: linux/amd64
+    profiles: [visibility]
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: 'false'
+      ES_JAVA_OPTS: -Xms256m -Xmx256m
+      ingest.geoip.downloader.enabled: 'false'
+    networks: [isolated]
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data
+    healthcheck:
+      test: [CMD-SHELL, 'curl -fsS http://localhost:9200/_cluster/health > /dev/null']
+      interval: 10s
+      timeout: 5s
+      retries: 30
+networks:
+  isolated:
+    internal: true
+volumes:
+  application-db:
+  temporal-db:
+  redis:
+  elasticsearch:
