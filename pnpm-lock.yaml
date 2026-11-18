@@ -504,9 +504,6 @@ importers:
       parse5:
         specifier: ^6.0.1
         version: 6.0.1
-      polotno:
-        specifier: ^3.0.0-beta.25
-        version: 3.0.0-beta.25(@types/react@19.1.8)(@types/sortablejs@1.15.9)(konva@10.2.0)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@8.0.5)(@types/react@19.1.8)(bufferutil@4.1.0)(react@19.2.4)(utf-8-validate@5.0.10))(react@19.2.4)(typescript@5.5.4)
       qrcode:
         specifier: ^1.5.4
         version: 1.5.4
@@ -14892,12 +14889,6 @@ packages:
 
   points-on-path@0.2.1:
     resolution: {integrity: sha512-25ClnWWuw7JbWZcgqY/gJ4FQWadKxGWk+3kR/7kD0tCaDtPPMj7oHu2ToLaVhfpnHrZzYby2w6tUA0eOIuUg8g==}
-
-  polotno@3.0.0-beta.25:
-    resolution: {integrity: sha512-r1MyrHQ7lpQ7zNflXLfNbCZP1kYAtstiA2ez1GAu05goxg7TTnNGyT0Q8PYF/G3PpKoompAS7CXrUq5tXWdRWw==}
-    peerDependencies:
-      react: 19.2.4
-      react-dom: 19.2.4
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -35920,40 +35911,6 @@ snapshots:
     dependencies:
       path-data-parser: 0.1.0
       points-on-curve: 0.2.0
-
-  polotno@3.0.0-beta.25(@types/react@19.1.8)(@types/sortablejs@1.15.9)(konva@10.2.0)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@8.0.5)(@types/react@19.1.8)(bufferutil@4.1.0)(react@19.2.4)(utf-8-validate@5.0.10))(react@19.2.4)(typescript@5.5.4):
-    dependencies:
-      '@blueprintjs/core': 6.10.0(@types/react@19.1.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@blueprintjs/icons': 6.8.0(@types/react@19.1.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@blueprintjs/select': 6.1.4(@types/react@19.1.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      gifuct-js: 2.1.2
-      gradient-parser: 1.2.0
-      lodash-es: 4.18.1
-      mediabunny: 1.40.1
-      mensch: 0.3.4
-      mobx: 6.15.0
-      mobx-react-lite: 4.1.1(mobx@6.15.0)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@8.0.5)(@types/react@19.1.8)(bufferutil@4.1.0)(react@19.2.4)(utf-8-validate@5.0.10))(react@19.2.4)
-      mobx-state-tree: 7.0.2(mobx@6.15.0)(typescript@5.5.4)
-      nanoid: 3.3.20
-      quill: 2.0.3
-      rasterizehtml: 1.4.1
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-      react-konva: 19.2.3(@types/react@19.1.8)(konva@10.2.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react-konva-utils: 2.0.0(konva@10.2.0)(react-dom@19.2.4(react@19.2.4))(react-konva@19.2.3(@types/react@19.1.8)(konva@10.2.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
-      react-sortablejs: 6.1.4(@types/sortablejs@1.15.9)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(sortablejs@1.15.7)
-      react-window: 1.8.11(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      sortablejs: 1.15.7
-      svg-round-corners: 0.4.3
-      swr: 2.4.1(react@19.2.4)
-      tinycolor2: 1.6.0
-      use-image: 1.1.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/sortablejs'
-      - konva
-      - react-native
-      - typescript
 
   possible-typed-array-names@1.1.0: {}
 

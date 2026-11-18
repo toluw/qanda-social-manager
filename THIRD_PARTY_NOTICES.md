@@ -37,11 +37,19 @@ owners and services. They are not Q and A-created assets.
 The Q and A icon was supplied by the operator for this derivative. This notice
 does not grant trademark rights or independently license the supplied artwork.
 
-This is not a complete dependency license inventory. Before distribution,
-collect applicable notices from the exact installed dependency versions and
-resolve the provenance/license of the bundled Charter font files in
-`apps/frontend/src/components/new-launch/providers/medium/fonts/`, which do not
-have an adjacent license file in this checkout. Do not invent or remove notices.
+Installed dependency evidence is recorded in `docs/dependencies/`: an inventory
+of discovered package/version manifests and preserved bundled license texts.
+This includes tooling and package examples, not just browser runtime code, and
+is not a declaration that all dependency obligations have been satisfied.
+
+The tracked Charter, SFNS and Chirp font placeholders are zero bytes. No usable
+font data or application references were found in the inspected provider code;
+the Charter stylesheet refers to absent webfonts. They must not be replaced
+with proprietary font data without establishing permission.
+
+Release review must verify commercial Polotno entitlement, Meta Platform License
+terms, FSL build-tool terms, LGPL/MPL obligations and incomplete package metadata.
+See `docs/dependencies/README.md` and `docs/VALIDATION_REPORT.md`.
 
 ## Corresponding Source — release requirement
 
@@ -64,3 +72,22 @@ The static Source Code section is generated from
 flags record verified repository access, not a completed build or exhaustive
 compliance audit. See `docs/BUILDING.md` for release inputs and remaining checks.
 The Charter font provenance and full dependency notice review remain pending.
+
+Operator confirmation (2026-11-18): the organization does not have a commercial
+Polotno license covering this installation. Commercial release using that editor
+remains blocked until appropriate entitlement is obtained or an approved
+replacement is implemented and verified. No editor was disabled or replaced
+during this validation.
+
+## Polotno removal — 2026-11-18
+
+At the operator's request, removed the Polotno editor, both editor entry buttons,
+its components and stylesheet, dependency/lockfile entries, frontend key plumbing
+and the billing feature advertising an advanced picture editor. Environment files
+and backend/provider behavior were not changed. Upload, select, clear, AI image/
+video generation and media settings remain. A frozen offline install accepted
+the changed manifest/lockfile and removed 412 installed packages; unrelated pinned
+versions were retained. The dependency evidence was refreshed after removal.
+Earlier Polotno entitlement findings describe the pre-removal checkout; Polotno
+is no longer an installed application dependency. Other dependency reviews and
+the pinned Next.js advisory still apply.

@@ -92,3 +92,35 @@ the company URL, releaseCommit to the hash above, and urlApproved/sourcePublishe
 to true, then run the included preparation script before building. No application
 logic or styles change in this follow-up. Full build, runtime correspondence and
 license inventory checks remain pending; publication is not release approval.
+
+## Validation update — 2026-11-18
+
+Ran the frozen dependency install and local Prisma client generation without
+changing schemas or databases. Current and upstream frontend typechecks pass.
+ESLint retains 615 baseline errors, with no new diagnostics after normalization.
+Collected dependency manifests and original bundled notice evidence in
+`docs/dependencies/`; release-specific review remains incomplete. Confirmed empty
+upstream font placeholders and documented them. Fixed mobile wrapping of the
+legal page source hash. Local responsive legal-page and compiled-theme fixture
+checks pass; see `docs/VALIDATION_REPORT.md` for scope and build limitations.
+
+Frontend build configuration follow-up: keep isomorphic-dompurify external on the
+server so its JSDOM dependency can read package-relative assets. No changes to
+shared sanitizer code or its allowed tags/attributes were made.
+
+The corrected Webpack build completed compilation, TypeScript, page generation
+and tracing, then exited with Next SecurityFatalError for the pinned version's
+known vulnerability. No final passing build or security upgrade is claimed.
+
+## Polotno removal — 2026-11-18
+
+At the operator's request, removed the Polotno editor, both editor entry buttons,
+its components and stylesheet, dependency/lockfile entries, frontend key plumbing
+and the billing feature advertising an advanced picture editor. Environment files
+and backend/provider behavior were not changed. Upload, select, clear, AI image/
+video generation and media settings remain. A frozen offline install accepted
+the changed manifest/lockfile and removed 412 installed packages; unrelated pinned
+versions were retained. The dependency evidence was refreshed after removal.
+Earlier Polotno entitlement findings describe the pre-removal checkout; Polotno
+is no longer an installed application dependency. Other dependency reviews and
+the pinned Next.js advisory still apply.

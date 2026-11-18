@@ -23,6 +23,15 @@ including actual deployment secrets.
 
 ## Local build preparation
 
+Validation follow-up: see `VALIDATION_REPORT.md`. In the local validation run,
+installation used `--ignore-scripts`, followed by explicit `prisma generate`
+(not db push/migrate). Typecheck passed. The default Node heap was insufficient
+for Webpack, so the retry used `NODE_OPTIONS=--max-old-space-size=6144` and
+`pnpm --filter ./apps/frontend run build --webpack`. The frontend config keeps
+`isomorphic-dompurify` external on the server because its JSDOM dependency reads
+package-relative files. Review the report for the actual build result and the
+remaining upstream lint/test issues before claiming a reproducible release.
+
 Use an isolated development environment. Do not connect to production databases,
 Redis, Temporal, storage, OAuth credentials or social accounts for build checks.
 

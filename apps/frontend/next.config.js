@@ -3,6 +3,8 @@ import { withSentryConfig } from '@sentry/nextjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // DOMPurify's server-side JSDOM dependency reads files relative to its package.
+  serverExternalPackages: ['isomorphic-dompurify'],
   experimental: {
     proxyTimeout: 90_000,
   },
