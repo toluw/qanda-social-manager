@@ -1,7 +1,7 @@
 {
   "_instructions": "The operator approved this repository URL. Anonymous public archive access was verified. releaseCommit identifies the published application source; regenerate legal.html with prepare-source-page.py after changing these settings. Build and dependency/font license checks remain pending. This does not authorize deployment.",
   "repositoryUrl": "https://github.com/toluw/qanda-social-manager",
-  "releaseCommit": "0dd05df2ad34499f48bde7dfb819a52f374394a4",
+  "releaseCommit": "63c3f185d97bf211cfb923fbeee50acc335016d4",
   "urlApproved": true,
   "sourcePublished": true
 }

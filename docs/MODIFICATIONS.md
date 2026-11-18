@@ -124,3 +124,13 @@ versions were retained. The dependency evidence was refreshed after removal.
 Earlier Polotno entitlement findings describe the pre-removal checkout; Polotno
 is no longer an installed application dependency. Other dependency reviews and
 the pinned Next.js advisory still apply.
+
+## Updated source offer — 2026-11-18
+
+The Polotno-free source revision is `63c3f185d97bf211cfb923fbeee50acc335016d4`.
+Its public archive was downloaded anonymously and checked for the removed editor,
+updated package manifest, notices and build/validation records. The source offer
+is generated from this revision with the approved company URL and both flags
+true. This follow-up changes source-offer configuration/HTML and records only;
+run the included generator with these values to reproduce it. No deployment
+or resolution of the Next.js advisory is claimed.
